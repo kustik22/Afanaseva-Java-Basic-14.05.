@@ -2,24 +2,24 @@ package com.kristina.afanaseva222;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class rugby {
+public class Rugby {
     public static void main(String[] args) {
-        new rugby().execute();
+        new Rugby().execute();
     }
 
     private void execute() {
-        Team aviator = new Team("авіатор");
-        Team RK_Tech_A_S = new Team("РК_Тех_А_С");
-        double aviatorAverageAge = aviator.averageAge();
-        double RK_Tech_A_SAverageAge = RK_Tech_A_S.averageAge();
-        System.out.println(aviator);
-        System.out.println(aviatorAverageAge);
-        System.out.println(RK_Tech_A_S);
-        System.out.println(RK_Tech_A_SAverageAge);
-        if (aviatorAverageAge > RK_Tech_A_SAverageAge)
-            System.out.println("Середній вік гравців" + aviator.getName() + "більше");
-        else if (aviatorAverageAge < RK_Tech_A_SAverageAge)
-            System.out.println("Середній вік гравців команди" + RK_Tech_A_S.getName() + "більше");
+        Team Aviator = new Team("Авіатор");
+        Team Falcon = new Team("Сокіл");
+        double AviatorAverageAge = Aviator.averageAge();
+        double FalconAverageAge = Falcon.averageAge();
+        System.out.println(Aviator);
+        System.out.println(AviatorAverageAge);
+        System.out.println(Falcon);
+        System.out.println(FalconAverageAge);
+        if (AviatorAverageAge > FalconAverageAge)
+            System.out.println("Середній вік гравців" + Aviator.getName() + "більше");
+        else if (AviatorAverageAge < FalconAverageAge)
+            System.out.println("Середній вік гравців команди" + Falcon.getName() + "більше");
         else System.out.println("Середній вік команди рівний");
     }
 
@@ -59,15 +59,16 @@ public class rugby {
         }
     }
 
-    class Person {
-        private int age;
 
-        public int getAge() {
-            return age;
-        }
+        class Person {
+            private int age;
 
-        public Person(int age) {
-            this.age = age;
+            public int getAge() {
+                return age;
+            }
+
+            public Person(int age) {
+                this.age = age;
+            }
         }
     }
-}
